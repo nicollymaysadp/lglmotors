@@ -1,0 +1,1334 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LGL Motors — Compra, venda e troca de veículos em Sorocaba</title>
+<meta name="description" content="LGL Motors em Sorocaba/SP. A loja que realiza sonhos: compra, venda, troca e financiamento de veículos com a melhor avaliação do mercado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a0a0a;--ink-2:#141414;--ink-3:#1d1d1f;
+  --paper:#fff;--paper-2:#f3f3f1;--paper-3:#ebeae7;
+  --steel:#74777c;--steel-2:#9a9da2;
+  --line:rgba(10,10,10,.10);--line-2:rgba(255,255,255,.12);
+  --disp:"Archivo",-apple-system,system-ui,sans-serif;
+  --body:"Manrope",-apple-system,system-ui,sans-serif;
+  --maxw:1240px;--shadow:0 18px 50px -22px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+::selection{background:var(--ink);color:#fff}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--disp);font-weight:900;line-height:.98;letter-spacing:-.02em;text-transform:uppercase}
+.eyebrow{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.32em;font-size:.72rem;color:var(--steel)}
+.lead{font-size:1.08rem;line-height:1.7;color:var(--ink-3)}
+section{padding:90px 0}
+
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* topbar */
+.topbar{background:var(--ink);color:#fff;font-size:.8rem;letter-spacing:.02em}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:38px}
+.tb-l{display:flex;align-items:center;gap:18px;opacity:.85;font-weight:500}
+.tb-l span{display:inline-flex;align-items:center;gap:7px}
+.topbar a{font-weight:700;display:inline-flex;align-items:center;gap:7px;border-bottom:1px solid transparent;transition:border-color .2s}
+.topbar a:hover{border-color:rgba(255,255,255,.6)}
+.tb-close{margin-left:6px;opacity:.6;font-size:1.2rem;line-height:1;color:#fff;cursor:pointer}
+.tb-close:hover{opacity:1}
+@media(max-width:760px){.hide-sm{display:none!important}}
+
+/* header */
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:padding .25s,box-shadow .25s}
+header.scrolled{box-shadow:0 8px 30px -18px rgba(0,0,0,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px;transition:height .25s}
+header.scrolled .nav{height:64px}
+.brand{display:flex;align-items:center;gap:13px}
+.logo-badge{width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;flex:none;font-family:var(--disp);font-weight:900;font-size:.88rem;letter-spacing:.04em;transition:width .25s,height .25s;box-shadow:0 0 0 1px var(--line)}
+header.scrolled .logo-badge{width:40px;height:40px;font-size:.78rem}
+.brand .bt b{font-family:var(--disp);font-weight:900;font-size:1.18rem;letter-spacing:-.01em;display:block}
+.brand .bt small{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.42em;font-size:.56rem;color:var(--steel);display:block;margin-top:2px}
+nav.links{display:flex;align-items:center;gap:34px}
+nav.links a{font-weight:600;font-size:.92rem;color:var(--ink-3);position:relative;padding:4px 0}
+nav.links a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--ink);transition:width .28s cubic-bezier(.2,.7,.2,1)}
+nav.links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;padding:13px 22px;border-radius:100px;transition:transform .18s,background .2s,color .2s,box-shadow .2s;white-space:nowrap;cursor:pointer;border:none}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000;box-shadow:0 12px 26px -12px rgba(0,0,0,.6)}
+.btn-light{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-light:hover{background:var(--ink);color:#fff}
+.btn-ghost{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+.btn-ghost:hover{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px #fff}
+.btn svg{width:1.05em;height:1.05em}
+.hamb{display:none;width:46px;height:46px;border-radius:12px;background:var(--ink);color:#fff;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer}
+.hamb i{display:block;width:20px;height:2px;background:#fff;transition:.25s}
+@media(max-width:1024px){nav.links{display:none}.nav-cta .btn:not(.btn-wa){display:none}.hamb{display:flex}}
+
+/* mobile menu */
+.msheet{position:fixed;inset:0;z-index:2000;background:var(--ink);color:#fff;transform:translateY(-100%);transition:transform .45s cubic-bezier(.22,.8,.22,1);display:flex;flex-direction:column;padding:26px}
+.msheet.open{transform:translateY(0)}
+.msheet .mtop{display:flex;align-items:center;justify-content:space-between;margin-bottom:30px}
+.mclose{width:46px;height:46px;border-radius:12px;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.3);color:#fff;font-size:1.4rem;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.mlinks{display:flex;flex-direction:column;gap:4px}
+.mlinks a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:2rem;letter-spacing:-.02em;padding:12px 0;border-bottom:1px solid var(--line-2);display:flex;align-items:center;justify-content:space-between;color:#fff}
+.msheet .mfoot{margin-top:auto;display:flex;flex-direction:column;gap:12px;padding-top:24px}
+
+/* hero */
+.hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;padding:0}
+.hero-grid-lines{position:absolute;inset:0;opacity:.5;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:100% 64px}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding-top:78px;padding-bottom:84px}
+.hl .eyebrow{color:rgba(255,255,255,.55);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.hl .eyebrow::before{content:"";width:34px;height:2px;background:rgba(255,255,255,.55);display:inline-block}
+.hl h1{font-size:clamp(2.8rem,5.5vw,4.8rem);color:#fff;margin-bottom:20px}
+.hl p{font-size:1.1rem;color:rgba(255,255,255,.65);max-width:440px;margin-bottom:36px;line-height:1.65}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px}
+.stats{display:flex;gap:34px;margin-top:52px;padding-top:38px;border-top:1px solid rgba(255,255,255,.12)}
+.stat-num{font-family:var(--disp);font-weight:900;font-size:2.4rem;color:#fff;letter-spacing:-.03em}
+.stat-lbl{font-size:.78rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.14em;margin-top:2px;font-weight:600}
+.hcard{position:relative;z-index:2}
+.hcard .frame{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.hcard .car-img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block}
+.hcard .car-ph{width:100%;aspect-ratio:4/3;background:var(--ink-2);display:flex;align-items:center;justify-content:center}
+.hcard .frame-info{padding:22px 24px 24px;background:#fff}
+.tagline{display:inline-block;background:var(--ink);color:#fff;font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.62rem;padding:6px 12px;border-radius:6px;margin-bottom:12px}
+.car-name{font-family:var(--disp);font-weight:900;font-size:1.5rem;color:var(--ink);text-transform:uppercase;letter-spacing:-.01em;line-height:1}
+.pricepill{display:flex;align-items:baseline;gap:6px;margin-top:14px}
+.pricepill small{font-size:.72rem;color:var(--steel);text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.pricepill b{font-family:var(--disp);font-size:1.7rem;font-weight:900;color:var(--ink)}
+.floatbadge{position:absolute;right:-22px;top:-22px;width:84px;height:84px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:var(--disp);font-weight:900;font-size:.7rem;text-transform:uppercase;letter-spacing:.04em;text-align:center;line-height:1.3;box-shadow:0 14px 30px -10px rgba(0,0,0,.6)}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:38px;padding-top:48px;padding-bottom:60px}.hcard{max-width:520px;margin:0 auto}}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat{position:relative;background:var(--ink);color:#fff;border-radius:16px;padding:26px 22px 22px;min-height:178px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;cursor:pointer;transition:transform .3s,box-shadow .3s;clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%)}
+.cat:nth-child(even){background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.cat:hover{transform:translateY(-6px);box-shadow:0 26px 50px -24px rgba(0,0,0,.5)}
+.cat .csvg{width:100%;height:64px;opacity:.92}
+.cat:nth-child(even) .csvg{opacity:1}
+.clabel{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:1.55rem;letter-spacing:-.02em}
+.ccount{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.6}
+.cat-arrow{position:absolute;right:18px;top:20px;opacity:.5;transition:transform .3s,opacity .3s}
+.cat:hover .cat-arrow{transform:translate(3px,-3px);opacity:1}
+@media(max-width:900px){.cats{grid-template-columns:repeat(2,1fr)}}
+
+/* inventory */
+.bg-soft{background:var(--paper-2)}
+.sec-head{margin-bottom:48px}
+.sec-head h2{font-size:clamp(1.9rem,3.8vw,3rem);margin-top:12px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.chip{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;padding:10px 18px;border-radius:100px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);color:var(--ink-3);transition:.2s;cursor:pointer;border:none}
+.chip:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.chip.active{background:var(--ink);color:#fff;box-shadow:none}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 0 var(--line),0 14px 40px -28px rgba(0,0,0,.35);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;cursor:pointer}
+.card:hover{transform:translateY(-7px);box-shadow:0 30px 60px -30px rgba(0,0,0,.45)}
+.card .imgwrap{position:relative;overflow:hidden}
+.card .imgwrap img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.card:hover .imgwrap img{transform:scale(1.07)}
+.card .car-ph{width:100%;aspect-ratio:4/3;background:var(--paper-3);display:flex;align-items:center;justify-content:center;color:var(--steel-2)}
+.cat-tag{position:absolute;top:12px;left:12px;background:rgba(10,10,10,.85);backdrop-filter:blur(4px);color:#fff;font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.6rem;padding:6px 10px;border-radius:6px}
+.card-body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column;gap:6px}
+.card-brand{font-size:.72rem;font-weight:700;color:var(--steel);text-transform:uppercase;letter-spacing:.12em}
+.card-name{font-family:var(--disp);font-weight:900;font-size:1.15rem;text-transform:uppercase;letter-spacing:-.01em;line-height:1.1;color:var(--ink)}
+.card-meta{display:flex;gap:12px;font-size:.78rem;color:var(--steel);margin-top:4px;flex-wrap:wrap}
+.card-meta span{display:inline-flex;align-items:center;gap:5px}
+.card-meta svg{width:13px;height:13px;flex:none}
+.card .price{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.price-val{font-family:var(--disp);font-weight:900;font-size:1.35rem;color:var(--ink);letter-spacing:-.02em}
+.price-val sup{font-size:.65em;vertical-align:super}
+.card .go{width:42px;height:42px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;flex:none;transition:.2s}
+.card .go:hover{background:#000}
+.empty{grid-column:1/-1;text-align:center;padding:60px 0;color:var(--steel)}
+.empty b{font-family:var(--disp);text-transform:uppercase;color:var(--ink);font-size:1.4rem;display:block;margin-bottom:8px}
+.inv-foot{margin-top:34px;text-align:center}
+@media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+
+/* trade band */
+.trade{background:var(--ink);color:#fff;padding:64px 0}
+.trade .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.trade h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:#fff;margin-bottom:8px}
+.trade p{color:rgba(255,255,255,.6);max-width:480px}
+
+/* financing */
+.fin-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.fin-list{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:16px}
+.fin-list li{display:flex;gap:14px;align-items:flex-start}
+.fin-icon{width:36px;height:36px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;flex:none}
+.fin-icon svg{width:16px;height:16px}
+.fin-list b{display:block;font-weight:700;font-size:.95rem;margin-bottom:2px}
+.fin-list span{font-size:.85rem;color:var(--steel)}
+.sim{background:var(--ink);color:#fff;border-radius:22px;padding:34px;box-shadow:var(--shadow)}
+.sim h3{font-size:1.5rem;color:#fff;margin-bottom:24px}
+.sim label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.55);display:block;margin-bottom:8px}
+.sim input[type=range]{width:100%;accent-color:#fff;cursor:pointer;margin-bottom:6px}
+.rval{font-family:var(--disp);font-weight:800;font-size:1.2rem;color:#fff;margin-bottom:20px}
+.seg{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.seg button{font-family:var(--disp);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;padding:9px 16px;border-radius:8px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border:none;cursor:pointer;transition:.2s}
+.seg button.on{background:#fff;color:var(--ink)}
+.sim .result{background:rgba(255,255,255,.08);border-radius:14px;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.sim .result .lbl{font-size:.8rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.pmt{font-family:var(--disp);font-size:2rem;font-weight:900;color:#fff;letter-spacing:-.02em}
+.pmt em{font-style:normal;font-size:1rem;color:rgba(255,255,255,.6)}
+.disc{font-size:.68rem;color:rgba(255,255,255,.45);margin-top:10px;line-height:1.4}
+@media(max-width:900px){.fin-grid{grid-template-columns:1fr;gap:34px}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
+.about-logo-box{display:flex;align-items:center;justify-content:center}
+.about-ring{width:min(360px,100%);aspect-ratio:1;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 40px 80px -34px rgba(0,0,0,.6)}
+.ring-lgl{font-family:var(--disp);font-weight:900;font-size:5rem;color:#fff;letter-spacing:-.02em}
+.meaning{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;padding-top:28px;border-top:1px solid var(--line)}
+.meaning .m{text-align:center}
+.ltr{font-family:var(--disp);font-size:2.5rem;font-weight:900;color:var(--ink);line-height:1;margin-bottom:4px}
+.meaning .m b{font-weight:700;font-size:.95rem;display:block}
+.meaning .m span{font-size:.8rem;color:var(--steel)}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:34px}.about-logo-box{order:-1}}
+
+/* instagram */
+.ig-sec{background:var(--ink);color:#fff;padding:80px 0}
+.ig-sec .wrap{display:flex;gap:50px;align-items:center;flex-wrap:wrap}
+.ig-left{flex:1;min-width:260px}
+.ig-left h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:#fff;margin-bottom:16px}
+.ig-left p{color:rgba(255,255,255,.6);margin-bottom:28px}
+.igrow{display:flex;gap:10px;flex-wrap:wrap;flex:1;min-width:260px;justify-content:center}
+.igcard{width:160px;height:160px;border-radius:14px;overflow:hidden;position:relative;cursor:pointer;background:#1a1a1a;display:flex;align-items:center;justify-content:center}
+.igcard:hover .igover{opacity:1}
+.igover{position:absolute;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s}
+.igover svg{color:#fff;width:28px;height:28px}
+@media(max-width:640px){.igcard{width:calc(50% - 5px)}}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.map-wrap{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);height:380px}
+.map-wrap iframe{width:100%;height:100%;border:0;display:block}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--steel)}
+.f input,.f textarea{padding:13px 16px;border:1.5px solid var(--paper-3);border-radius:10px;font-family:var(--body);font-size:.9rem;color:var(--ink);background:#fff;transition:border-color .2s;outline:none}
+.f input:focus,.f textarea:focus{border-color:var(--ink)}
+.f textarea{resize:vertical;min-height:110px}
+.info-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+.info-list li{display:flex;gap:12px;align-items:flex-start;font-size:.92rem}
+.ii{width:36px;height:36px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;flex:none}
+.ii svg{width:16px;height:16px}
+.info-list b{display:block;font-weight:700;margin-bottom:2px}
+.info-list span{color:var(--steel);font-size:.85rem}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:30px}}
+@media(max-width:560px){.fgrid{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:.84rem;padding:38px 0}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer .fl{font-family:var(--disp);font-weight:900;font-size:1.1rem;color:#fff}
+footer a{color:rgba(255,255,255,.55);transition:color .2s}
+footer a:hover{color:#fff}
+
+/* detail modal */
+.overlay{position:fixed;inset:0;z-index:5000;background:rgba(0,0,0,.72);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
+.overlay.open{opacity:1;pointer-events:all}
+.dv{background:#fff;border-radius:22px;max-width:520px;width:100%;max-height:95vh;overflow-y:auto;position:relative;transform:translateY(20px);transition:transform .3s}
+.overlay.open .dv{transform:none}
+.dv-close{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;font-size:1.3rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:1;border:none}
+.dv-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:22px 22px 0 0;display:block}
+.dv-ph{width:100%;aspect-ratio:16/9;background:var(--paper-3);border-radius:22px 22px 0 0;display:flex;align-items:center;justify-content:center;color:var(--steel)}
+.dv-body{padding:28px 32px 34px}
+.dv-tag{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.62rem;background:var(--ink);color:#fff;padding:5px 11px;border-radius:6px;display:inline-block;margin-bottom:14px}
+.dv-title{font-family:var(--disp);font-weight:900;font-size:clamp(1.5rem,3vw,2rem);text-transform:uppercase;letter-spacing:-.02em;color:var(--ink);line-height:1;margin-bottom:18px}
+.dv-specs{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;padding:16px 20px;background:var(--paper-2);border-radius:12px}
+.dv-spec{display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600}
+.dv-spec svg{width:16px;height:16px;color:var(--steel);flex:none}
+.dv-desc{font-size:.95rem;line-height:1.7;color:var(--ink-3);margin-bottom:20px}
+.dv-items{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:28px}
+.dv-items li{display:flex;align-items:center;gap:8px;font-size:.9rem}
+.dv-items li::before{content:"✓";font-weight:900;color:var(--ink);flex:none}
+.dv-price{font-family:var(--disp);font-weight:900;font-size:2rem;color:var(--ink);letter-spacing:-.03em;margin-bottom:20px}
+.dv-price sup{font-size:.6em;vertical-align:super}
+@media(max-width:560px){.dv-items{grid-template-columns:1fr}.dv-body{padding:20px 20px 28px}}
+/* galeria */
+.dv-gallery{position:relative;border-radius:22px 22px 0 0;background:var(--paper-3);overflow:hidden}
+.dv-slide{width:100%;height:72vh;background-size:contain;background-position:center;background-repeat:no-repeat;background-color:var(--paper-3)}
+.dv-slide-ph{width:100%;height:72vh;display:flex;align-items:center;justify-content:center;color:var(--steel)}
+.dv-arr{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;backdrop-filter:blur(4px);transition:.2s;z-index:2}
+.dv-arr:hover{background:rgba(0,0,0,.85)}
+.dv-arr.prev{left:10px}
+.dv-arr.next{right:10px}
+.dv-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2}
+.dv-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;border:none;padding:0;transition:.25s}
+.dv-dot.on{background:#fff;width:18px;border-radius:3px}
+.dv-count{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.6);color:#fff;font-family:var(--disp);font-size:.6rem;font-weight:700;padding:4px 9px;border-radius:6px;backdrop-filter:blur(4px);letter-spacing:.06em;z-index:2}
+/* admin multi-foto */
+.adm-photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin-bottom:10px}
+.adm-photo-thumb{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:4/3}
+.adm-photo-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.adm-photo-rm{position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;background:rgba(0,0,0,.75);color:#fff;font-size:.85rem;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;line-height:1}
+.adm-photo-rm:hover{background:#cc0000}
+.adm-photo-add{aspect-ratio:4/3;border-radius:10px;border:2px dashed rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;position:relative;background:rgba(255,255,255,.03);transition:.2s}
+.adm-photo-add:hover{border-color:rgba(255,255,255,.4)}
+.adm-photo-add input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.adm-photo-add span{font-size:.65rem;color:rgba(255,255,255,.3);font-family:var(--disp);text-transform:uppercase;letter-spacing:.08em}
+/* card photo count badge */
+.photo-count{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.65);color:#fff;font-family:var(--disp);font-size:.58rem;font-weight:700;padding:3px 8px;border-radius:5px;backdrop-filter:blur(4px);letter-spacing:.06em;display:flex;align-items:center;gap:4px}
+
+/* fab */
+.fab{position:fixed;right:20px;bottom:20px;z-index:900;width:60px;height:60px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 36px -12px rgba(0,0,0,.6);transition:transform .25s;animation:fabin .5s ease 1s both}
+.fab:hover{transform:scale(1.08)}
+
+/* animations */
+@keyframes fabin{from{opacity:0;transform:scale(.7) translateY(20px)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s cubic-bezier(.2,.7,.2,1),transform .65s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ── Admin ───────────────────────────────────────────────────── */
+.adm-login{position:fixed;inset:0;z-index:9100;background:rgba(0,0,0,.97);display:none;align-items:center;justify-content:center;flex-direction:column;gap:16px}
+.adm-login.on{display:flex}
+.adm-login h2{font-family:var(--disp);font-size:1.5rem;font-weight:900;text-transform:uppercase;color:#fff;letter-spacing:-.01em}
+.adm-login p{font-size:.82rem;color:rgba(255,255,255,.4);margin-top:-8px}
+.adm-login input{padding:14px 20px;border-radius:12px;border:1.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);color:#fff;font-size:1rem;font-family:var(--body);text-align:center;letter-spacing:.3em;outline:none;width:220px}
+.adm-login input:focus{border-color:rgba(255,255,255,.5)}
+.adm-err{color:#ff5555;font-size:.8rem;min-height:16px}
+.adm{position:fixed;inset:0;z-index:9000;background:#0d0d0d;color:#fff;display:none;flex-direction:column;overflow:hidden}
+.adm.on{display:flex}
+.adm-top{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0}
+.adm-top h2{font-family:var(--disp);font-weight:900;font-size:1rem;text-transform:uppercase;letter-spacing:.06em}
+.adm-body{flex:1;overflow-y:auto;padding:20px}
+.adm-stock{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:20px}
+.adm-card{background:#1c1c1c;border-radius:14px;overflow:hidden;position:relative}
+.adm-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.adm-card .adm-cph{width:100%;aspect-ratio:4/3;background:#272727;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.2)}
+.adm-card .adm-ci{padding:10px 12px}
+.adm-card .adm-cn{font-family:var(--disp);font-weight:800;font-size:.82rem;text-transform:uppercase;color:#fff;letter-spacing:-.01em;line-height:1.2}
+.adm-card .adm-cp{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:3px}
+.adm-card .adm-del{position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,.8);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;border:none;transition:.2s}
+.adm-card .adm-del:hover{background:#cc0000}
+.adm-card .adm-edit{position:absolute;top:8px;right:42px;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,.8);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.75rem;border:none;transition:.2s}
+.adm-card .adm-edit:hover{background:#1a5fa8}
+.adm-card .adm-badge{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.8);color:#fff;font-family:var(--disp);font-size:.52rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:3px 7px;border-radius:5px}
+.adm-new{background:rgba(255,255,255,.04);border:2px dashed rgba(255,255,255,.12);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;cursor:pointer;padding:24px;transition:.2s}
+.adm-new:hover{border-color:rgba(255,255,255,.3)}
+.adm-new span{font-family:var(--disp);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35)}
+.adm-form{background:#1c1c1c;border-radius:16px;padding:20px;margin-bottom:20px;display:none}
+.adm-form h3{font-family:var(--disp);font-weight:800;font-size:.95rem;text-transform:uppercase;color:#fff;margin-bottom:18px;letter-spacing:.04em}
+.adm-upload{width:100%;aspect-ratio:16/7;border-radius:12px;border:2px dashed rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;cursor:pointer;margin-bottom:16px;overflow:hidden;position:relative;background:#272727;transition:.2s}
+.adm-upload:hover{border-color:rgba(255,255,255,.4)}
+.adm-upload .adm-ul{color:rgba(255,255,255,.35);font-size:.82rem;text-align:center;pointer-events:none;z-index:1}
+.adm-upload input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.adm-upload .adm-prev{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.adm-fg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.adm-f2{display:flex;flex-direction:column;gap:5px}
+.adm-f2 label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4)}
+.adm-f2 input,.adm-f2 select,.adm-f2 textarea{padding:11px 13px;border-radius:9px;border:1.5px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:#fff;font-family:var(--body);font-size:.88rem;outline:none;transition:.2s}
+.adm-f2 input:focus,.adm-f2 select:focus,.adm-f2 textarea:focus{border-color:rgba(255,255,255,.35)}
+.adm-f2 select option{background:#1c1c1c}
+.adm-f2 textarea{resize:vertical;min-height:70px}
+.adm-full{grid-column:1/-1}
+.adm-toggle-row{display:flex;align-items:center;gap:10px;margin:12px 0 16px}
+.adm-toggle-row span{font-size:.82rem;color:rgba(255,255,255,.6)}
+.adm-tog{width:42px;height:22px;border-radius:11px;background:rgba(255,255,255,.12);position:relative;cursor:pointer;transition:.3s;border:none;flex-none}
+.adm-tog.on{background:#fff}
+.adm-tog::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#666;transition:.3s}
+.adm-tog.on::after{left:23px;background:#000}
+@media(max-width:560px){.adm-fg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar" id="topbar">
+  <div class="wrap">
+    <div class="tb-l">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2Z"/></svg>(15) 99105-5967</span>
+      <span class="hide-sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg>Rua Sete de Setembro, 404 — Sorocaba/SP</span>
+    </div>
+    <a href="https://wa.me/5515991055967?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20LGL%20Motors." target="_blank" rel="noopener">Fale com um consultor <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Z"/></svg></a>
+    <button class="tb-close" onclick="this.closest('.topbar').style.display='none'">×</button>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#inicio" class="brand">
+      <div class="logo-badge">LGL</div>
+      <span class="bt"><b>LGL Motors</b><small>Sorocaba · SP</small></span>
+    </a>
+    <nav class="links">
+      <a href="#estoque">Estoque</a>
+      <a href="#financiamento">Financiamento</a>
+      <a href="#sobre">A Loja</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://wa.me/5515991055967?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20LGL%20Motors." target="_blank" rel="noopener" class="btn btn-wa" style="background:var(--ink);color:#fff">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Z"/></svg>
+        WhatsApp
+      </a>
+      <button class="hamb" id="hamb" aria-label="Menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="msheet" id="msheet">
+  <div class="mtop">
+    <span class="brand"><div class="logo-badge" style="background:#fff;color:#000">LGL</div><span class="bt"><b style="color:#fff">LGL Motors</b><small style="color:rgba(255,255,255,.5)">Sorocaba · SP</small></span></span>
+    <button class="mclose" id="mclose">×</button>
+  </div>
+  <nav class="mlinks">
+    <a href="#estoque">Estoque <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#financiamento">Financiamento <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#sobre">A Loja <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#contato">Contato <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </nav>
+  <div class="mfoot">
+    <a href="https://wa.me/5515991055967?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20LGL%20Motors." target="_blank" class="btn btn-ghost">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Z"/></svg>
+      Falar no WhatsApp
+    </a>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="inicio">
+  <div class="hero-grid-lines"></div>
+  <div class="wrap">
+    <div class="hl">
+      <div class="eyebrow">LGL Motors · Sorocaba/SP</div>
+      <h1>A loja que<br>realiza<br>sonhos</h1>
+      <p>4 anos, mais de 300 famílias atendidas e uma missão que não muda: encontrar o carro certo para cada pessoa. Na LGL Motors, cada negociação é tratada com honestidade e cuidado de verdade.</p>
+      <div class="hero-btns">
+        <a href="#estoque" class="btn btn-ghost">Ver estoque</a>
+        <a href="#financiamento" class="btn btn-light">Simular financiamento</a>
+      </div>
+      <div class="stats">
+        <div><div class="stat-num"><span data-count="4">0</span>+</div><div class="stat-lbl">Anos de<br>experiência</div></div>
+        <div><div class="stat-num"><span data-count="300">0</span>+</div><div class="stat-lbl">Vendas<br>realizadas</div></div>
+        <div><div class="stat-num"><span data-count="100">0</span>%</div><div class="stat-lbl">Dedicação<br>a você</div></div>
+      </div>
+    </div>
+    <div class="hcard" id="heroCard">
+      <div class="floatbadge">★<br>Destaque</div>
+      <div class="frame" id="heroFrame"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section id="categorias" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Navegue por tipo</div>
+      <h2>O que você procura?</h2>
+    </div>
+    <div class="cats reveal" id="cats"></div>
+  </div>
+</section>
+
+<!-- Inventory -->
+<section id="estoque" class="bg-soft">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Estoque disponível</div>
+      <h2>Nossos veículos</h2>
+      <p style="margin-top:12px;color:var(--steel)">Estoque revisado. Clique em um carro para ver detalhes e falar no WhatsApp.</p>
+    </div>
+    <div class="chips reveal" id="chips"></div>
+    <div class="grid reveal" id="grid"></div>
+    <div class="inv-foot reveal">
+      <a href="https://www.instagram.com/lgl_motors/" target="_blank" rel="noopener" class="btn btn-light">Ver estoque completo no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- Trade CTA -->
+<div class="trade">
+  <div class="wrap">
+    <div>
+      <h2>Quer vender ou trocar seu carro?</h2>
+      <p>Avaliamos na hora, pagamos o justo e resolvemos tudo sem burocracia.</p>
+    </div>
+    <a href="https://wa.me/5515991055967?text=Ol%C3%A1!%20Gostaria%20de%20avaliar%20meu%20carro%20para%20venda%20ou%20troca." target="_blank" rel="noopener" class="btn btn-ghost">Quero avaliar meu carro <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Z"/></svg></a>
+  </div>
+</div>
+
+<!-- Financing -->
+<section id="financiamento">
+  <div class="wrap">
+    <div class="fin-grid">
+      <div class="reveal">
+        <div class="eyebrow">Financie com a gente</div>
+        <h2 style="font-size:clamp(1.9rem,3.8vw,3rem);margin-top:12px">Parcelas que<br>cabem no bolso</h2>
+        <p class="lead" style="margin-top:16px">Trabalhamos com os principais bancos e financeiras para encontrar a melhor condição para o seu perfil.</p>
+        <ul class="fin-list">
+          <li><div class="fin-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.8"/></svg></div><div><b>Aprovação rápida</b><span>Resposta em minutos, sem burocracia</span></div></li>
+          <li><div class="fin-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="#fff" stroke-width="1.8"/><path d="M2 10h20" stroke="#fff" stroke-width="1.8"/></svg></div><div><b>Diversas opções de prazo</b><span>De 12 a 60 meses, você escolhe</span></div></li>
+          <li><div class="fin-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div><div><b>Entrada flexível</b><span>Negocie conforme seu orçamento</span></div></li>
+        </ul>
+      </div>
+      <div class="sim reveal">
+        <h3>Simulador</h3>
+        <label>Valor do veículo</label>
+        <input type="range" id="rVal" min="15000" max="200000" step="1000" value="60000">
+        <div class="rval" id="vVal">R$ 60.000</div>
+        <label>Entrada</label>
+        <input type="range" id="rEnt" min="0" max="60000" step="500" value="15000">
+        <div class="rval" id="vEnt">R$ 15.000</div>
+        <label>Prazo</label>
+        <div class="seg" id="seg">
+          <button data-n="12">12×</button>
+          <button data-n="24">24×</button>
+          <button data-n="36" class="on">36×</button>
+          <button data-n="48">48×</button>
+          <button data-n="60">60×</button>
+        </div>
+        <div class="result">
+          <div><div class="lbl">Estimativa de parcela</div><div class="pmt" id="pmt">R$ 0 <em>/mês</em></div></div>
+          <a class="btn btn-ghost" id="simWa" href="#" target="_blank">Quero esse carro</a>
+        </div>
+        <p class="disc">* Simulação estimada. Taxa de referência: 1,99% a.m. Consulte condições reais conosco.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="sobre" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="eyebrow" style="display:flex;align-items:center;gap:12px"><span style="width:30px;height:2px;background:var(--ink);display:inline-block"></span>Nossa história</div>
+        <h2 style="font-size:clamp(1.9rem,4vw,3rem);margin-top:14px">Mais que uma loja,<br>uma família</h2>
+        <p class="lead" style="margin-top:18px">Em 4 anos de mercado, o Leonardo construiu algo que vai muito além de uma carreira em vendas: construiu confiança. Mais de 300 famílias encontraram o carro certo através do seu atendimento — e cada uma delas foi tratada com a mesma seriedade e cuidado da primeira.</p>
+        <p style="margin-top:14px;color:var(--steel)">A LGL Motors é o passo seguinte dessa história. Uma loja fundada com propósito, onde nenhum cliente sai sem uma resposta honesta. O nome carrega o que há de mais importante: <b>L</b> de Leonardo, <b>G</b> de Gabriela e <b>L</b> de Lucca — a família que está por trás de cada negociação, e o motivo pelo qual cada detalhe importa.</p>
+        <div class="meaning">
+          <div class="m"><div class="ltr">L</div><b>Leonardo</b><span>Fundador e especialista</span></div>
+          <div class="m"><div class="ltr">G</div><b>Gabriela</b><span>A força da família</span></div>
+          <div class="m"><div class="ltr">L</div><b>Lucca</b><span>A nossa motivação</span></div>
+        </div>
+      </div>
+      <div class="about-logo-box reveal">
+        <div class="about-ring"><div class="ring-lgl">LGL</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Instagram -->
+<div class="ig-sec">
+  <div class="wrap">
+    <div class="ig-left reveal">
+      <div class="eyebrow" style="color:rgba(255,255,255,.45)">Siga a gente</div>
+      <h2>@lgl_motors</h2>
+      <p>Novidades do estoque, carros avaliados e bastidores da loja todos os dias no Instagram.</p>
+      <a href="https://www.instagram.com/lgl_motors/" target="_blank" rel="noopener" class="btn btn-ghost">Seguir no Instagram</a>
+    </div>
+    <div class="igrow reveal" id="igrow"></div>
+  </div>
+</div>
+
+<!-- Contact -->
+<section id="contato">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Fale conosco</div>
+      <h2>Venha nos visitar</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <ul class="info-list">
+          <li><div class="ii"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7Z" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="#fff" stroke-width="1.8"/></svg></div><div><b>Endereço</b><span>Rua Sete de Setembro, 404 — Sorocaba/SP</span></div></li>
+          <li><div class="ii"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2Z"/></svg></div><div><b>Telefone / WhatsApp</b><span>(15) 99105-5967</span></div></li>
+          <li><div class="ii"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div><div><b>Horário</b><span>Segunda a Sábado, 9h às 18h</span></div></li>
+        </ul>
+        <div class="fgrid">
+          <div class="f"><label>Seu nome</label><input type="text" id="fNome" placeholder="Como podemos chamar?"></div>
+          <div class="f"><label>Telefone</label><input type="tel" id="fFone" placeholder="(15) 99999-9999"></div>
+          <div class="f" style="grid-column:1/-1"><label>Mensagem</label><textarea id="fMsg" placeholder="Conte o que você procura..."></textarea></div>
+        </div>
+        <button class="btn btn-dark" id="sendForm">Enviar no WhatsApp <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Z"/></svg></button>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Rua+Sete+de+Setembro+404+Sorocaba+SP&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <span class="fl">LGL Motors</span>
+    <span>Rua Sete de Setembro, 404 — Sorocaba/SP</span>
+    <a href="https://www.instagram.com/lgl_motors/" target="_blank" rel="noopener">@lgl_motors</a>
+    <span>© 2025 LGL Motors. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<!-- Detail Modal -->
+<div class="overlay" id="overlay">
+  <div class="dv" id="dv">
+    <button class="dv-close" id="dvClose">×</button>
+    <div id="dvContent"></div>
+  </div>
+</div>
+
+<!-- Admin Login -->
+<div class="adm-login" id="admLogin">
+  <div class="logo-badge" style="width:64px;height:64px;font-size:1rem;margin-bottom:4px">LGL</div>
+  <h2>Área Admin</h2>
+  <p>Acesso exclusivo LGL Motors</p>
+  <input type="password" id="admPass" placeholder="••••••••" autocomplete="off">
+  <div class="adm-err" id="admErr"></div>
+  <button class="btn btn-dark" onclick="admCheck()">Entrar</button>
+  <button style="margin-top:4px;color:rgba(255,255,255,.3);font-size:.8rem;background:none;border:none;cursor:pointer" onclick="admLoginClose()">Cancelar</button>
+</div>
+
+<!-- Admin Panel -->
+<div class="adm" id="admPanel">
+  <div class="adm-top">
+    <h2>Estoque LGL Motors</h2>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-dark" style="font-size:.72rem;padding:9px 16px" onclick="admOpenForm()">+ Novo carro</button>
+      <button class="btn" style="font-size:.72rem;padding:9px 16px;background:#1a6b3a;color:#fff" onclick="admPublish()">⬆ Publicar</button>
+      <label class="btn" style="font-size:.72rem;padding:9px 16px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);cursor:pointer" title="Importar estoque de outro dispositivo">⬇ Importar<input type="file" accept=".json" style="display:none" onchange="admImport(this)"></label>
+      <button class="btn" style="font-size:.72rem;padding:9px 16px;background:rgba(255,255,255,.06);color:rgba(255,255,255,.4)" onclick="admClose()">Sair</button>
+    </div>
+  </div>
+  <div class="adm-body">
+    <div class="adm-form" id="admForm">
+      <h3>Cadastrar veículo</h3>
+      <div class="adm-f2 adm-full" style="margin-bottom:4px">
+        <label>Fotos do veículo</label>
+        <div class="adm-photos" id="admPhotosGrid">
+          <div class="adm-photo-add">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>Adicionar</span>
+            <input type="file" accept="image/*" multiple onchange="admAddPhotos(this)">
+          </div>
+        </div>
+      </div>
+      <div class="adm-fg">
+        <div class="adm-f2"><label>Marca</label><input id="aM" placeholder="Honda"></div>
+        <div class="adm-f2"><label>Modelo</label><input id="aMo" placeholder="Fit EXL 1.5"></div>
+        <div class="adm-f2"><label>Ano</label><input id="aA" placeholder="2020" maxlength="4"></div>
+        <div class="adm-f2"><label>KM</label><input id="aK" placeholder="45.000"></div>
+        <div class="adm-f2"><label>Câmbio</label><select id="aCb"><option>Automático</option><option>Manual</option><option>CVT</option></select></div>
+        <div class="adm-f2"><label>Preço (R$)</label><input id="aPr" placeholder="62.900"></div>
+        <div class="adm-f2"><label>Categoria</label><select id="aCt"><option value="hatch">Hatch</option><option value="sedan">Sedan</option><option value="picape">Picape</option><option value="suv">SUV</option></select></div>
+        <div class="adm-f2 adm-full"><label>Descrição</label><textarea id="aDe" placeholder="Descreva o veículo..."></textarea></div>
+        <div class="adm-f2 adm-full"><label>Itens (separe por vírgula)</label><input id="aIt" placeholder="Ar-condicionado, Direção elétrica, CVT..."></div>
+      </div>
+      <div class="adm-toggle-row">
+        <button class="adm-tog" id="aDest" onclick="this.classList.toggle('on')"></button>
+        <span>Destaque da semana</span>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button class="btn btn-dark" style="flex:1" onclick="admSave()">Publicar no site</button>
+        <button class="btn" style="background:rgba(255,255,255,.07);color:rgba(255,255,255,.5)" onclick="admCloseForm()">Cancelar</button>
+      </div>
+    </div>
+    <div class="adm-stock" id="admStock"></div>
+  </div>
+</div>
+
+<!-- Floating WhatsApp -->
+<a class="fab" href="https://wa.me/5515991055967?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20LGL%20Motors." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Z"/></svg>
+</a>
+
+<script>
+/* ====================================================================
+   EDITE AQUI OS DADOS DA SUA LOJA
+   ==================================================================== */
+const CONFIG = {
+  whatsapp: "5515991055967",
+  instagram: "https://www.instagram.com/lgl_motors/",
+
+  categorias: [
+    {id:"hatch",  nome:"Hatchs"},
+    {id:"sedan",  nome:"Sedans"},
+    {id:"picape", nome:"Picapes"},
+    {id:"suv",    nome:"SUVs"},
+  ],
+
+  // img: link direto da foto (Google Drive ou outro). Deixe "" se não tiver ainda.
+  // cat: hatch | sedan | picape | suv
+  // destaque: true → aparece no topo
+  // itens: lista de itens do carro
+  carros: [
+    {
+      marca:"Honda", modelo:"Fit EXL 1.5", ano:"2018", km:"72.000", cambio:"Automático", preco:"62.900",
+      cat:"hatch", img:"https://drive.google.com/file/d/1Aac2a_Br8tRTLvqNl13OfAaCKwfOdkEm/view?usp=drive_link", destaque:true,
+      descricao:"Compacto por fora, surpreendente por dentro! O Honda Fit é referência em espaço, economia e confiabilidade.",
+      itens:["Motor 1.5 flex econômico","Câmbio CVT","Direção elétrica","Ar-condicionado","Sistema Magic Seat","Rodas de liga leve","Excelente porta-malas"]
+    },
+    {
+      marca:"Toyota", modelo:"Corolla XEI 2.0", ano:"2013", km:"98.000", cambio:"Automático", preco:"58.900",
+      cat:"sedan", img:"", destaque:false,
+      descricao:"Sedan executivo com espaço generoso e conforto superior em todas as situações.",
+      itens:["Motor 2.0 flex","Câmbio automático","Direção elétrica","Ar-condicionado","Central multimídia"]
+    },
+    {
+      marca:"Volkswagen", modelo:"Saveiro Robust 1.6", ano:"2015", km:"110.000", cambio:"Manual", preco:"49.900",
+      cat:"picape", img:"", destaque:false,
+      descricao:"A picape compacta mais vendida do Brasil. Ideal para trabalho e lazer.",
+      itens:["Motor 1.6 flex","Câmbio manual","Direção hidráulica","Ar-condicionado","Caçamba reforçada"]
+    },
+    {
+      marca:"Renault", modelo:"Kwid Intense 1.0", ano:"2020", km:"55.000", cambio:"Manual", preco:"48.900",
+      cat:"suv", img:"", destaque:true,
+      descricao:"Design aventureiro com o melhor custo-benefício do segmento.",
+      itens:["Motor 1.0 flex","Câmbio manual","Direção elétrica","Ar-condicionado","Central multimídia","Câmera de ré"]
+    },
+  ],
+
+  taxaMensal: 0.0199,
+
+  // FIREBASE — sincronização automática entre dispositivos (gratuito)
+  // Cole aqui a URL do seu Firebase Realtime Database
+  // Ex: "https://lgl-motors-default-rtdb.firebaseio.com"
+  firebaseUrl: "https://lgl-motors-default-rtdb.firebaseio.com",
+
+  // PLANILHA GOOGLE SHEETS (opcional)
+  // Publique sua planilha como CSV e cole o link aqui para atualizar o estoque em tempo real.
+  sheetUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTLcJHCDXQljfDeNNMSQIowPMn9KZ7Vlm8EXU9tR--qbKrvFBTCaUwAjx0SSYia4XeZl4A25-MMSvOf/pub?gid=259917740&single=true&output=csv",
+};
+/* ==================================================================== */
+
+const fmt = n => "R$ " + Math.round(n).toLocaleString("pt-BR");
+const waLink = msg => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+
+// Retorna array de URLs resolvidas do carro
+function getImgList(c){
+  let raw = c.imgs || (c.img ? [c.img] : []);
+  if(raw && !Array.isArray(raw) && typeof raw==='object') raw = Object.values(raw);
+  return Array.isArray(raw) ? raw.map(resolveImg).filter(Boolean) : [];
+}
+
+// Aceita nome de arquivo (fit.jpg) ou URL completa
+function resolveImg(url){
+  if(!url) return "";
+  if(url.startsWith("data:")) return url; // base64 — retorna direto, sem processar
+  const m = url.match(/\/d\/([a-zA-Z0-9_-]{10,})/);
+  if(m) return `https://drive.google.com/thumbnail?id=${m[1]}&sz=w800`;
+  return url;
+}
+
+const catSVG = {
+  hatch:`<svg class="csvg" viewBox="0 0 120 50" fill="none"><path d="M6 36h108M14 36c0-4 3-7 7-7s7 3 7 7M92 36c0-4 3-7 7-7s7 3 7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M10 36c0-3 1-7 3-9 2-2 6-3 10-3h22l16 9h22c5 0 8 3 8 7" stroke="currentColor" stroke-width="2.4"/><path d="M28 24l3-9h14v9" stroke="currentColor" stroke-width="2.2"/></svg>`,
+  sedan:`<svg class="csvg" viewBox="0 0 120 50" fill="none"><path d="M4 37h112M16 37c0-4 3-7 7-7s7 3 7 7M90 37c0-4 3-7 7-7s7 3 7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M8 37c0-4 2-8 7-9l10-8h34l14 8 22 2c5 1 8 4 8 7" stroke="currentColor" stroke-width="2.4"/><path d="M30 20h28l9 7H25z" stroke="currentColor" stroke-width="2.2"/></svg>`,
+  picape:`<svg class="csvg" viewBox="0 0 120 50" fill="none"><path d="M4 37h112M18 37c0-4 3-7 7-7s7 3 7 7M88 37c0-4 3-7 7-7s7 3 7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M8 37V24h40l10-9h16l8 9h22v13" stroke="currentColor" stroke-width="2.4"/><path d="M50 24h22M58 15v9" stroke="currentColor" stroke-width="2.2"/></svg>`,
+  suv:`<svg class="csvg" viewBox="0 0 120 50" fill="none"><path d="M4 37h112M16 37c0-4 3-7 7-7s7 3 7 7M90 37c0-4 3-7 7-7s7 3 7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M8 37V22c0-2 2-5 6-6l12-3h38l16 9h18c4 0 6 3 6 6v9" stroke="currentColor" stroke-width="2.4"/><path d="M30 13h30l8 6H28z" stroke="currentColor" stroke-width="2.2"/></svg>`,
+};
+const arrowSVG = `<svg class="cat-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+let stockData = CONFIG.carros;
+const countByCat = id => stockData.filter(c => c.cat === id).length;
+const ADM_KEY  = "lgl_estoque";
+async function _sha(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');}
+const ADM_HASH = "288cefcfdcd8e8d5a1dbd0ee56e1aa18f53a938cef8e90d04ffcab37d38c307c";
+const _adtmp   = [108,103,108,50,48,50,53]; // removido após configurar ADM_HASH
+let   _admF=0, _admB=false;
+
+/* hero card — atualizado após carregar o estoque */
+function renderHero(){
+  const dest = stockData.find(c => c.destaque) || stockData[0];
+  if(!dest) return;
+  const priceNum = parseInt((dest.preco||"0").replace(/\D/g,""));
+  document.getElementById("heroFrame").innerHTML =
+    (dest.img ? `<img src="${resolveImg(dest.img)}" alt="${dest.marca} ${dest.modelo}" class="car-img" onerror="this.style.opacity='0'">` :
+     `<div class="car-ph"><svg width="80" height="80" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/></svg></div>`) +
+    `<div class="frame-info"><span class="tagline">★ Destaque da semana</span><div class="car-name">${dest.marca} ${dest.modelo}</div><div class="pricepill"><small>A partir de</small><b>R$ ${priceNum.toLocaleString("pt-BR")}</b></div></div>`;
+}
+
+/* detail modal */
+const overlay = document.getElementById("overlay");
+document.getElementById("dvClose").onclick = closeDetail;
+overlay.addEventListener("click", e => { if(e.target===overlay) closeDetail(); });
+document.addEventListener("keydown", e => { if(e.key==="Escape") closeDetail(); });
+
+let _dvImgs=[], _dvIdx=0;
+function dvGo(dir){
+  _dvIdx=(_dvIdx+dir+_dvImgs.length)%_dvImgs.length;
+  const el=document.getElementById("dvMainImg");
+  if(el) el.style.backgroundImage=`url("${_dvImgs[_dvIdx]}")`;
+  document.querySelectorAll(".dv-dot").forEach((d,i)=>d.classList.toggle("on",i===_dvIdx));
+  const cur=document.getElementById("dvCountCur");
+  if(cur) cur.textContent=_dvIdx+1;
+}
+
+function openDetail(c){
+  const priceNum = parseInt((c.preco||"0").replace(/\D/g,""));
+  const msg = `Olá! Tenho interesse no ${c.marca} ${c.modelo} (${c.ano}). Está disponível?`;
+  _dvImgs = getImgList(c); _dvIdx = 0;
+  const hasMany = _dvImgs.length > 1;
+  // Imagens criadas sem src para evitar problemas de parsing com base64 grande
+  const galleryHTML = _dvImgs.length
+    ? `<div class="dv-gallery">
+        <div id="dvMainImg" class="dv-slide"></div>
+        ${hasMany?`<button class="dv-arr prev" onclick="dvGo(-1)">&#8249;</button><button class="dv-arr next" onclick="dvGo(1)">&#8250;</button>`:""}
+        ${hasMany?`<div class="dv-dots">${_dvImgs.map((_,i)=>`<button class="dv-dot ${i===0?"on":""}" onclick="dvGo(${i}-_dvIdx)"></button>`).join("")}</div>`:""}
+        ${hasMany?`<div class="dv-count"><span id="dvCountCur">1</span>/${_dvImgs.length}</div>`:""}
+      </div>`
+    : `<div class="dv-ph"><svg width="64" height="64" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="var(--steel)" stroke-width="1.3"/><circle cx="12" cy="13" r="3" stroke="var(--steel)" stroke-width="1.3"/></svg></div>`;
+
+  // touch swipe
+  let tx=0;
+  const dv=document.getElementById("dv");
+  dv.ontouchstart=e=>tx=e.touches[0].clientX;
+  dv.ontouchend=e=>{ const dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50) dvGo(dx<0?1:-1); };
+
+  document.getElementById("dvContent").innerHTML = galleryHTML +
+    `<div class="dv-body">
+      <div class="dv-tag">${c.cat.toUpperCase()}</div>
+      <div class="dv-title">${c.marca} ${c.modelo}</div>
+      <div class="dv-specs">
+        <div class="dv-spec"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M3 9h18M9 4v5M15 4v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>${c.ano}</div>
+        <div class="dv-spec"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm1 14h-2v-6h2Zm0-8h-2V6h2Z"/></svg>${c.km} km</div>
+        <div class="dv-spec"><svg viewBox="0 0 24 24" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="7" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="7" cy="17" r="2" stroke="currentColor" stroke-width="1.7"/><path d="M7 9v8M17 9v3a2 2 0 0 1-2 2H7" stroke="currentColor" stroke-width="1.7"/></svg>${c.cambio}</div>
+      </div>
+      ${c.descricao ? `<p class="dv-desc">${c.descricao}</p>` : ""}
+      ${c.itens && c.itens.length ? `<ul class="dv-items">${c.itens.map(i=>`<li>${i}</li>`).join("")}</ul>` : ""}
+      <div class="dv-price"><sup>R$</sup> ${priceNum.toLocaleString("pt-BR")}</div>
+      <a href="${waLink(msg)}" target="_blank" rel="noopener" class="btn btn-dark" style="width:100%;justify-content:center;font-size:.9rem">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Z"/></svg>
+        Tenho interesse — falar no WhatsApp
+      </a>
+    </div>`;
+  // Exibe a primeira foto via background-image
+  const dvMain = document.getElementById("dvMainImg");
+  if(dvMain) dvMain.style.backgroundImage = `url("${_dvImgs[0]}")`;
+  overlay.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeDetail(){
+  overlay.classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+/* instagram grid — usa fotos do estoque */
+function renderIgGrid(){
+  const el = document.getElementById("igrow");
+  if(!el) return;
+  const igSVG = `<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/></svg>`;
+  const cars = stockData.filter(c => getImgList(c).length > 0).slice(0, 6);
+  if(!cars.length){
+    el.innerHTML = [1,2,3,4].map(()=>`<a href="${CONFIG.instagram}" target="_blank" class="igcard" style="background:#1a1a1a"><div class="igover">${igSVG}</div></a>`).join("");
+    return;
+  }
+  el.innerHTML = cars.map(c => {
+    const img = getImgList(c)[0];
+    return `<a href="${CONFIG.instagram}" target="_blank" class="igcard">
+      <img src="${img}" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.parentElement.style.background='#1a1a1a';this.style.display='none'">
+      <div class="igover">${igSVG}</div>
+    </a>`;
+  }).join("");
+}
+
+/* car card */
+function carCard(c){
+  const priceNum = parseInt((c.preco||"0").replace(/\D/g,""));
+  const idx = stockData.indexOf(c);
+  return `<article class="card" data-cat="${c.cat}" onclick="openDetail(stockData[${idx}])">
+    <div class="imgwrap">
+      ${(()=>{ const imgs=getImgList(c);
+        return imgs.length
+          ? `<img src="${imgs[0]}" alt="${c.marca} ${c.modelo}" onerror="this.style.opacity='0'">`
+          : `<div class="car-ph"><svg width="56" height="56" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="13" r="3" stroke="currentColor" stroke-width="1.3"/></svg></div>`;
+      })()}
+      <span class="cat-tag">${c.destaque ? "★ Destaque" : c.marca}</span>
+      ${(()=>{ const n=getImgList(c).length; return n>1?`<div class="photo-count"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/></svg>${n}</div>`:""; })()}
+    </div>
+    <div class="card-body">
+      <div class="card-brand">${c.marca}</div>
+      <div class="card-name">${c.modelo}</div>
+      <div class="card-meta">
+        <span><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M3 9h18M9 4v5M15 4v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>${c.ano}</span>
+        <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm1 14h-2v-6h2Zm0-8h-2V6h2Z"/></svg>${c.km} km</span>
+        <span><svg viewBox="0 0 24 24" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="7" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="7" cy="17" r="2" stroke="currentColor" stroke-width="1.7"/><path d="M7 9v8M17 9v3a2 2 0 0 1-2 2H7" stroke="currentColor" stroke-width="1.7"/></svg>${c.cambio}</span>
+      </div>
+      <div class="price">
+        <div class="price-val"><sup>R$</sup> ${priceNum.toLocaleString("pt-BR")}</div>
+        <div class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+  </article>`;
+}
+
+/* grid + cats */
+function renderCats(){
+  document.getElementById("cats").innerHTML = CONFIG.categorias.map(c => `
+    <div class="cat" data-cat="${c.id}">${arrowSVG}${catSVG[c.id]||""}
+      <div><div class="clabel">${c.nome}</div><div class="ccount">${countByCat(c.id)} ${countByCat(c.id)===1?"veículo":"veículos"}</div></div>
+    </div>`).join("");
+}
+
+function renderGrid(filter){
+  const list = filter && filter!=="todos" ? stockData.filter(c=>c.cat===filter) : stockData;
+  document.getElementById("grid").innerHTML = list.length
+    ? list.map(carCard).join("")
+    : `<div class="empty"><b>Em breve</b>Novos veículos desta categoria a caminho!</div>`;
+}
+
+function renderChips(){
+  const all = [{id:"todos",nome:"Todos"}, ...CONFIG.categorias];
+  document.getElementById("chips").innerHTML = all.map((c,i)=>
+    `<button class="chip ${i===0?"active":""}" data-cat="${c.id}">${c.nome}</button>`).join("");
+}
+
+function setFilter(id){
+  document.querySelectorAll(".chip").forEach(ch=>ch.classList.toggle("active",ch.dataset.cat===id));
+  renderGrid(id);
+}
+
+document.getElementById("chips").addEventListener("click",e=>{const b=e.target.closest(".chip");if(b)setFilter(b.dataset.cat);});
+document.getElementById("cats").addEventListener("click",e=>{const c=e.target.closest(".cat");if(!c)return;setFilter(c.dataset.cat);document.getElementById("estoque").scrollIntoView({behavior:"smooth"});});
+
+/* Google Sheets integration */
+function parseCSV(text){
+  const rows=text.trim().split(/\r?\n/);if(rows.length<2)return[];
+  const headers=rows[0].split(",").map(h=>h.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""));
+  return rows.slice(1).map(row=>{
+    const cols=[];let cur="",inq=false;
+    for(const ch of row){if(ch==='"'){inq=!inq;continue;}if(ch===","&&!inq){cols.push(cur.trim());cur="";continue;}cur+=ch;}
+    cols.push(cur.trim());
+    const obj={};
+    headers.forEach((h,i)=>obj[h]=(cols[i]||"").replace(/^"|"$/g,"").trim());
+    obj.destaque=/^(sim|1|true)$/i.test(obj.destaque||"");
+    obj.itens=obj.itens?obj.itens.split("|").map(s=>s.trim()).filter(Boolean):[];
+    return obj;
+  }).filter(c=>c.marca&&c.modelo);
+}
+
+async function initStock(){
+  renderCats();renderChips();
+
+  // 1. Firebase — sincronização automática entre todos os dispositivos
+  if(CONFIG.firebaseUrl){
+    try{
+      const res = await fetch(`${CONFIG.firebaseUrl}/stock.json?t=${Date.now()}`,{cache:"no-cache"});
+      if(res.ok){
+        const raw = await res.json();
+        const data = Array.isArray(raw) ? raw : (raw && typeof raw==='object' ? Object.values(raw) : null);
+        if(data&&data.length){
+          stockData = data;
+          try{ localStorage.setItem(ADM_KEY, JSON.stringify(data)); }catch(e){}
+          renderHero();renderCats();renderGrid("todos");renderIgGrid(); return;
+        }
+      }
+    }catch(e){ console.warn("LGL: Firebase indisponível, tentando fallback.",e); }
+  }
+
+  // 2. stock.json do Netlify (fallback manual)
+  try{
+    const res = await fetch("stock.json?t="+Date.now(),{cache:"no-cache"});
+    if(res.ok){
+      const data = await res.json();
+      if(Array.isArray(data)&&data.length){
+        stockData = data;
+        try{ localStorage.setItem(ADM_KEY, JSON.stringify(data)); }catch(e){}
+        renderHero();renderCats();renderGrid("todos");renderIgGrid(); return;
+      }
+    }
+  }catch(e){}
+
+  // 3. localStorage
+  const saved=localStorage.getItem(ADM_KEY);
+  if(saved){ try{ const d=JSON.parse(saved); if(d.length){ stockData=d; renderHero();renderCats();renderGrid("todos");renderIgGrid(); return; } }catch(e){} }
+
+  // 4. __STOCK_PRESET__ (versão antiga)
+  if(window.__STOCK_PRESET__&&window.__STOCK_PRESET__.length){
+    stockData=window.__STOCK_PRESET__;
+    try{ localStorage.setItem(ADM_KEY,JSON.stringify(stockData)); }catch(e){}
+    renderHero();renderCats();renderGrid("todos");renderIgGrid(); return;
+  }
+
+  if(CONFIG.sheetUrl){
+    document.getElementById("grid").innerHTML=`<div class="empty" style="padding:70px 0">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="margin:0 auto 14px;display:block;animation:spin 1s linear infinite">
+        <circle cx="12" cy="12" r="10" stroke="var(--line)" stroke-width="2.5"/>
+        <path d="M12 2a10 10 0 0 1 10 10" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
+      </svg><b>Carregando estoque...</b></div>`;
+    try{
+      const res=await fetch(CONFIG.sheetUrl,{cache:"no-cache"});
+      if(!res.ok)throw new Error("http "+res.status);
+      const parsed=parseCSV(await res.text());
+      if(parsed.length){stockData=parsed;renderCats();}
+    }catch(e){console.warn("LGL: planilha indisponível, usando estoque local.",e);}
+  }
+  renderHero();
+  renderGrid("todos");
+}
+initStock();
+
+/* ── Admin ───────────────────────────────────────────────────── */
+let admPhotos = [];
+let editingIdx = -1;
+
+function admLoginClose(){ document.getElementById("admLogin").classList.remove("on"); }
+async function admCheck(){
+  if(!_isDesktop()){document.getElementById("admErr").textContent="Edição disponível apenas no computador."; return;}
+  if(_admB){document.getElementById("admErr").textContent="Aguarde 30 segundos para tentar novamente."; return;}
+  const v=document.getElementById("admPass").value;
+  const hash=await _sha(v);
+  const tmp=_adtmp.map(c=>String.fromCharCode(c)).join('');
+  const ok=ADM_HASH ? hash===ADM_HASH : v===tmp;
+  if(ok){
+    if(!ADM_HASH) console.warn('⚠️ LGL Segurança: Abra o HTML e substitua ADM_HASH por: "'+hash+'" para ocultar a senha definitivamente.');
+    _admF=0; admLoginClose();
+    document.getElementById("admPass").value="";
+    document.getElementById("admPanel").classList.add("on");
+    document.body.style.overflow="hidden";
+    admRender();
+  } else {
+    _admF++;
+    if(_admF>=5){
+      _admB=true;
+      document.getElementById("admErr").textContent="Acesso bloqueado por 30 segundos.";
+      setTimeout(()=>{_admB=false;_admF=0;document.getElementById("admErr").textContent="";},30000);
+    } else {
+      document.getElementById("admErr").textContent=`Senha incorreta. (${5-_admF} tentativa${5-_admF!==1?"s":""} restante${5-_admF!==1?"s":""})`;
+      setTimeout(()=>document.getElementById("admErr").textContent="",2500);
+    }
+  }
+}
+document.getElementById("admPass").addEventListener("keydown", e=>{ if(e.key==="Enter") admCheck(); });
+
+function admClose(){
+  document.getElementById("admPanel").classList.remove("on");
+  document.body.style.overflow = "";
+}
+
+function admRender(){
+  const grid = document.getElementById("admStock");
+  grid.innerHTML = stockData.map((c,i)=>`
+    <div class="adm-card">
+      ${c.img ? `<img src="${resolveImg(c.img)}" onerror="this.style.opacity='0'">` : `<div class="adm-cph"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.3"/></svg></div>`}
+      ${c.destaque?`<div class="adm-badge">★ Destaque</div>`:""}
+      <button class="adm-del" onclick="admDelete(${i})">×</button>
+      <button class="adm-edit" onclick="admEdit(${i})">✏</button>
+      <div class="adm-ci"><div class="adm-cn">${c.marca} ${c.modelo}</div>
+      <div class="adm-cp">R$ ${parseInt((c.preco||"0").replace(/\D/g,"")).toLocaleString("pt-BR")} · ${c.ano} · ${c.km} km</div></div>
+    </div>`).join("") +
+  `<div class="adm-new" onclick="admOpenForm()">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="rgba(255,255,255,.3)" stroke-width="2" stroke-linecap="round"/></svg>
+    <span>Novo carro</span>
+  </div>`;
+}
+
+function admDelete(i){
+  if(!confirm(`Remover "${stockData[i].marca} ${stockData[i].modelo}"?`)) return;
+  stockData.splice(i,1);
+  try{ localStorage.setItem(ADM_KEY, JSON.stringify(stockData)); }catch(e){}
+  admRender(); renderHero(); renderCats(); renderGrid("todos"); renderIgGrid();
+}
+
+function admOpenForm(){
+  editingIdx = -1;
+  document.querySelector("#admForm h3").textContent = "Cadastrar veículo";
+  document.getElementById("admForm").style.display = "block";
+  document.getElementById("admForm").scrollIntoView({behavior:"smooth"});
+}
+function admCloseForm(){
+  document.getElementById("admForm").style.display = "none";
+  editingIdx = -1;
+  admReset();
+}
+
+function admEdit(i){
+  const c = stockData[i];
+  editingIdx = i;
+  // Preenche o formulário com os dados do carro
+  document.getElementById("aM").value   = c.marca   || "";
+  document.getElementById("aMo").value  = c.modelo  || "";
+  document.getElementById("aA").value   = c.ano     || "";
+  document.getElementById("aK").value   = c.km      || "";
+  document.getElementById("aPr").value  = c.preco   || "";
+  document.getElementById("aDe").value  = c.descricao || "";
+  document.getElementById("aIt").value  = (c.itens||[]).join(", ");
+  // Câmbio
+  const cb = document.getElementById("aCb");
+  for(let o of cb.options) o.selected = o.value === c.cambio;
+  // Categoria
+  const ct = document.getElementById("aCt");
+  for(let o of ct.options) o.selected = o.value === c.cat;
+  // Destaque
+  document.getElementById("aDest").classList.toggle("on", !!c.destaque);
+  // Fotos existentes
+  admPhotos = [...(c.imgs || (c.img ? [c.img] : []))];
+  admRenderPhotos();
+  // Título do formulário
+  document.querySelector("#admForm h3").textContent = "Editar veículo";
+  document.getElementById("admForm").style.display = "block";
+  document.getElementById("admForm").scrollIntoView({behavior:"smooth"});
+}
+function admReset(){
+  ["aM","aMo","aA","aK","aPr","aDe","aIt"].forEach(id=>document.getElementById(id).value="");
+  document.getElementById("aCb").selectedIndex=0;
+  document.getElementById("aCt").selectedIndex=0;
+  document.getElementById("aDest").classList.remove("on");
+  admPhotos=[];
+  admRenderPhotos();
+}
+
+function admRenderPhotos(){
+  const grid=document.getElementById("admPhotosGrid");
+  grid.innerHTML=admPhotos.map((src,i)=>`
+    <div class="adm-photo-thumb">
+      <img src="${src}">
+      <button class="adm-photo-rm" onclick="admRemovePhoto(${i})">×</button>
+    </div>`).join("") +
+  `<div class="adm-photo-add">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-linecap="round"/></svg>
+    <span>Adicionar</span>
+    <input type="file" accept="image/*" multiple onchange="admAddPhotos(this)">
+  </div>`;
+}
+
+function admRemovePhoto(i){
+  admPhotos.splice(i,1);
+  admRenderPhotos();
+}
+
+const MAX_PHOTOS = 5;
+function admAddPhotos(input){
+  const files=Array.from(input.files); if(!files.length) return;
+  const remaining = MAX_PHOTOS - admPhotos.length;
+  if(remaining <= 0){ alert(`Máximo de ${MAX_PHOTOS} fotos por carro.`); return; }
+  files.slice(0, remaining).forEach(file=>{
+    const reader=new FileReader();
+    reader.onload=e=>{
+      const img=new Image();
+      img.onload=()=>{
+        try{
+          const canvas=document.createElement("canvas");
+          const MAX=1200, scale=Math.min(MAX/img.width,MAX/img.height,1);
+          canvas.width=Math.round(img.width*scale)||800;
+          canvas.height=Math.round(img.height*scale)||600;
+          canvas.getContext("2d").drawImage(img,0,0,canvas.width,canvas.height);
+          const data=canvas.toDataURL("image/jpeg",0.80);
+          if(data&&data.length>100){ admPhotos.push(data); admRenderPhotos(); }
+          else alert(`Foto "${file.name}" não pôde ser processada. Tente salvar como JPEG e tentar novamente.`);
+        }catch(e){ alert(`Erro ao processar "${file.name}". Tente converter para JPEG.`); }
+      };
+      img.onerror=()=>alert(`Formato não suportado: "${file.name}". Salve a foto como JPEG e tente novamente.`);
+      img.src=e.target.result;
+    };
+    reader.onerror=()=>alert(`Não foi possível ler "${file.name}".`);
+    reader.readAsDataURL(file);
+  });
+  if(files.length > remaining) alert(`Apenas ${remaining} foto(s) adicionada(s). Máximo é ${MAX_PHOTOS} por carro.`);
+}
+
+function admSave(){
+  const marca=document.getElementById("aM").value.trim();
+  const modelo=document.getElementById("aMo").value.trim();
+  const preco=document.getElementById("aPr").value.trim();
+  if(!marca||!modelo||!preco){ alert("Preencha ao menos: Marca, Modelo e Preço."); return; }
+  const itens=document.getElementById("aIt").value.split(",").map(s=>s.trim()).filter(Boolean);
+  const car={
+    marca, modelo,
+    ano:document.getElementById("aA").value.trim(),
+    km:document.getElementById("aK").value.trim(),
+    cambio:document.getElementById("aCb").value,
+    preco, cat:document.getElementById("aCt").value,
+    imgs:[...admPhotos],
+    img: admPhotos[0]||"",
+    destaque:document.getElementById("aDest").classList.contains("on"),
+    descricao:document.getElementById("aDe").value.trim(),
+    itens
+  };
+  if(editingIdx >= 0){
+    stockData[editingIdx] = car; // Atualiza o carro existente
+  } else {
+    stockData.unshift(car); // Adiciona novo
+  }
+  try{ localStorage.setItem(ADM_KEY, JSON.stringify(stockData)); }catch(e){}
+  admRender(); renderHero(); renderCats(); renderGrid("todos"); renderIgGrid();
+  admCloseForm();
+}
+
+async function _recompressImg(dataUrl){
+  return new Promise(res=>{
+    const img=new Image();
+    img.onload=()=>{
+      const MAX=1200, scale=Math.min(MAX/img.width,MAX/img.height,1);
+      const c=document.createElement("canvas");
+      c.width=Math.round(img.width*scale); c.height=Math.round(img.height*scale);
+      c.getContext("2d").drawImage(img,0,0,c.width,c.height);
+      res(c.toDataURL("image/jpeg",0.80));
+    };
+    img.onerror=()=>res(dataUrl);
+    img.src=dataUrl;
+  });
+}
+
+async function admPublish(){
+  if(!stockData.length){ alert("Nenhum carro no estoque."); return; }
+
+  const btn = document.querySelector('[onclick="admPublish()"]');
+  const orig = btn ? btn.textContent : "";
+  if(btn){ btn.textContent = "⏳ Otimizando fotos..."; btn.disabled = true; }
+
+  try{
+    // Recomprime fotos que ainda estão em alta resolução
+    for(const car of stockData){
+      const imgs = car.imgs ? (Array.isArray(car.imgs)?car.imgs:Object.values(car.imgs)) : (car.img?[car.img]:[]);
+      const recompressed = [];
+      for(const img of imgs){
+        if(img && img.startsWith("data:") && img.length > 150_000){
+          recompressed.push(await _recompressImg(img));
+        } else {
+          recompressed.push(img);
+        }
+      }
+      if(recompressed.length) car.imgs = recompressed;
+    }
+
+    if(btn) btn.textContent = "⏳ Publicando...";
+
+    const json = JSON.stringify(stockData, null, 2);
+    const sizeMB = (json.length / 1048576).toFixed(1);
+
+    if(json.length > 40_000_000){
+      alert(`Estoque muito grande (${sizeMB}MB).\n\nDica: reduza para no máximo 4 fotos por carro.`);
+      return;
+    }
+
+    // Firebase: sincroniza automaticamente em todos os dispositivos
+    if(CONFIG.firebaseUrl){
+      try{
+        const res = await fetch(`${CONFIG.firebaseUrl}/stock.json`,{
+          method:"PUT",
+          headers:{"Content-Type":"application/json"},
+          body:json
+        });
+        if(res.ok){
+          alert(`✅ Publicado! (${sizeMB}MB)\n\nTodos os dispositivos já estão atualizados automaticamente.`);
+          return;
+        }
+      }catch(e){ console.warn("LGL: Firebase falhou ao salvar.",e); }
+    }
+
+    // Fallback: download do arquivo para subir no Netlify manualmente
+    const blob = new Blob([json], {type:"application/json"});
+    const file = new File([blob], "stock.json", {type:"application/json"});
+
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if(isMobile && navigator.canShare && navigator.canShare({files:[file]})){
+      try{ await navigator.share({files:[file], title:"Estoque LGL Motors"}); return; }catch(e){}
+    }
+
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "stock.json";
+    a.style.display = "none";
+    document.body.appendChild(a); a.click();
+    setTimeout(()=>{ document.body.removeChild(a); URL.revokeObjectURL(a.href); }, 1000);
+    setTimeout(()=>alert(
+      `✅ Arquivo gerado! (${sizeMB}MB)\n\n`+
+      `Arraste o arquivo "stock.json" na caixa do Netlify.\n\n`+
+      `Dica: configure o Firebase para sincronização automática.`
+    ), 400);
+
+  }catch(e){ alert("Erro: " + e.message); }
+  finally{ if(btn){ btn.textContent = orig; btn.disabled = false; } }
+}
+
+function admImport(input){
+  const file = input.files[0]; if(!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try{
+      const data = JSON.parse(e.target.result);
+      if(!Array.isArray(data)||!data.length) throw new Error();
+      stockData = data;
+      try{ localStorage.setItem(ADM_KEY, JSON.stringify(stockData)); }catch(e){}
+      admRender(); renderHero(); renderCats(); renderGrid("todos"); renderIgGrid();
+      alert(`✅ ${data.length} veículo(s) importado(s)!`);
+    }catch(e){ alert("Arquivo inválido. Use um arquivo exportado pelo admin."); }
+  };
+  reader.readAsText(file);
+  input.value="";
+}
+
+// Admin: apenas computadores (bloqueado em celulares)
+const _isDesktop = () => !/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) && window.innerWidth >= 900;
+
+// Teclado: digitar "adm" (só desktop)
+let _admBuf="";
+document.addEventListener("keydown",e=>{
+  if(!_isDesktop()) return;
+  _admBuf+=e.key.toLowerCase();
+  if(_admBuf.length>3) _admBuf=_admBuf.slice(-3);
+  if(_admBuf==="adm"){ document.getElementById("admLogin").classList.add("on"); document.getElementById("admPass").focus(); }
+});
+
+/* header scroll */
+const hdr=document.getElementById("header");
+addEventListener("scroll",()=>hdr.classList.toggle("scrolled",scrollY>20));
+
+/* mobile menu */
+const msheet=document.getElementById("msheet");
+const openMenu=()=>{msheet.classList.add("open");document.body.style.overflow="hidden";};
+const closeMenu=()=>{msheet.classList.remove("open");document.body.style.overflow="";};
+document.getElementById("hamb").onclick=openMenu;
+document.getElementById("mclose").onclick=closeMenu;
+msheet.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
+
+/* reveal on scroll */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+/* count-up */
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,target=+el.dataset.count,dur=1400,start=performance.now();
+  (function tick(now){const t=Math.min((now-start)/dur,1);el.textContent=Math.round(t*target);if(t<1)requestAnimationFrame(tick);})(start);
+  io2.unobserve(el);
+}),{threshold:.5});
+document.querySelectorAll("[data-count]").forEach(el=>io2.observe(el));
+
+/* financing simulator */
+const rVal=document.getElementById("rVal"),rEnt=document.getElementById("rEnt");
+let prazo=36;
+function calcSim(){
+  let val=+rVal.value,ent=Math.min(+rEnt.value,val);
+  rEnt.max=val;if(+rEnt.value>val){rEnt.value=val;ent=val;}
+  document.getElementById("vVal").textContent=fmt(val);
+  document.getElementById("vEnt").textContent=fmt(ent);
+  const fin=val-ent,r=CONFIG.taxaMensal;
+  const pmt=fin>0?fin*(r*Math.pow(1+r,prazo))/(Math.pow(1+r,prazo)-1):0;
+  document.getElementById("pmt").innerHTML=`${fmt(pmt)} <em>/mês</em>`;
+  document.getElementById("simWa").href=waLink(`Olá! Quero simular o financiamento de um veículo de ${fmt(val)}, entrada de ${fmt(ent)} em ${prazo}x. Pode me ajudar?`);
+}
+rVal.addEventListener("input",calcSim);rEnt.addEventListener("input",calcSim);
+document.getElementById("seg").addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b)return;
+  document.querySelectorAll("#seg button").forEach(x=>x.classList.remove("on"));
+  b.classList.add("on");prazo=+b.dataset.n;calcSim();
+});
+calcSim();
+
+/* contact form */
+document.getElementById("sendForm").addEventListener("click",()=>{
+  const nome=document.getElementById("fNome").value.trim();
+  const fone=document.getElementById("fFone").value.trim();
+  const msg=document.getElementById("fMsg").value.trim();
+  window.open(waLink(`Olá! Me chamo ${nome||"(não informado)"}${fone?" e meu telefone é "+fone:""}.\n\n${msg||"Gostaria de mais informações."}`), "_blank");
+});
+</script>
+</body>
+</html>
