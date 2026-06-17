@@ -916,10 +916,19 @@ function parseCSV(text){
 async function initStock(){
   renderCats();renderChips();
 
-  // 1. localStorage — exibe imediatamente sem esperar rede
+  // 1. localStorage — só usa se tiver ao menos tantos carros quanto o CONFIG padrão
   let rendered = false;
   const saved=localStorage.getItem(ADM_KEY);
-  if(saved){ try{ const d=JSON.parse(saved); if(d.length){ stockData=d; renderHero();renderCats();renderGrid("todos");renderIgGrid(); rendered=true; } }catch(e){} }
+  if(saved){
+    try{
+      const d=JSON.parse(saved);
+      if(d.length >= CONFIG.carros.length){
+        stockData=d; renderHero();renderCats();renderGrid("todos");renderIgGrid(); rendered=true;
+      } else {
+        localStorage.removeItem(ADM_KEY); // limpa dados incompletos/corrompidos
+      }
+    }catch(e){ localStorage.removeItem(ADM_KEY); }
+  }
 
   // 2. Firebase em paralelo — atualiza se tiver dados mais completos
   if(CONFIG.firebaseUrl){
