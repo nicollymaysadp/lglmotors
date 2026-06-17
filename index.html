@@ -740,7 +740,6 @@ const countByCat = id => stockData.filter(c => c.cat === id).length;
 const ADM_KEY  = "lgl_estoque";
 async function _sha(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');}
 const ADM_HASH = "288cefcfdcd8e8d5a1dbd0ee56e1aa18f53a938cef8e90d04ffcab37d38c307c";
-const _adtmp   = [108,103,108,50,48,50,53]; // removido após configurar ADM_HASH
 let   _admF=0, _admB=false;
 
 /* hero card — atualizado após carregar o estoque */
@@ -1002,10 +1001,8 @@ async function admCheck(){
   if(_admB){document.getElementById("admErr").textContent="Aguarde 30 segundos para tentar novamente."; return;}
   const v=document.getElementById("admPass").value;
   const hash=await _sha(v);
-  const tmp=_adtmp.map(c=>String.fromCharCode(c)).join('');
-  const ok=ADM_HASH ? hash===ADM_HASH : v===tmp;
+  const ok=hash===ADM_HASH;
   if(ok){
-    if(!ADM_HASH) console.warn('⚠️ LGL Segurança: Abra o HTML e substitua ADM_HASH por: "'+hash+'" para ocultar a senha definitivamente.');
     _admF=0; admLoginClose();
     document.getElementById("admPass").value="";
     document.getElementById("admPanel").classList.add("on");
@@ -1170,11 +1167,15 @@ function admSave(){
     itens
   };
   if(editingIdx >= 0){
-    stockData[editingIdx] = car; // Atualiza o carro existente
+    stockData[editingIdx] = car;
   } else {
-    stockData.unshift(car); // Adiciona novo
+    stockData.unshift(car);
   }
-  try{ localStorage.setItem(ADM_KEY, JSON.stringify(stockData)); }catch(e){}
+  try{
+    localStorage.setItem(ADM_KEY, JSON.stringify(stockData));
+  }catch(e){
+    alert("⚠️ Atenção: memória do navegador cheia. Clique em 'Publicar' para não perder os dados.");
+  }
   admRender(); renderHero(); renderCats(); renderGrid("todos"); renderIgGrid();
   admCloseForm();
 }
