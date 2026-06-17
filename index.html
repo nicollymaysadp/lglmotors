@@ -670,28 +670,64 @@ const CONFIG = {
   // itens: lista de itens do carro
   carros: [
     {
-      marca:"Honda", modelo:"Fit EXL 1.5", ano:"2018", km:"72.000", cambio:"Automático", preco:"62.900",
-      cat:"hatch", img:"https://drive.google.com/file/d/1Aac2a_Br8tRTLvqNl13OfAaCKwfOdkEm/view?usp=drive_link", destaque:true,
-      descricao:"Compacto por fora, surpreendente por dentro! O Honda Fit é referência em espaço, economia e confiabilidade.",
-      itens:["Motor 1.5 flex econômico","Câmbio CVT","Direção elétrica","Ar-condicionado","Sistema Magic Seat","Rodas de liga leve","Excelente porta-malas"]
+      marca:"Honda", modelo:"Fit Flex", ano:"2018", km:"70.000", cambio:"Automático", preco:"78.990",
+      cat:"hatch", img:"", destaque:false,
+      descricao:"Compacto e econômico, com o famoso sistema Magic Seat que transforma o espaço interno.",
+      itens:["Motor 1.5 flex econômico","Câmbio CVT","Direção elétrica","Ar-condicionado","Sistema Magic Seat","Excelente porta-malas"]
     },
     {
-      marca:"Toyota", modelo:"Corolla XEI 2.0", ano:"2013", km:"98.000", cambio:"Automático", preco:"58.900",
+      marca:"Volkswagen Fox", modelo:"Versão GII", ano:"2013", km:"138.000", cambio:"Manual", preco:"42.990",
+      cat:"hatch", img:"", destaque:false,
+      descricao:"Hatch compacto e robusto com ótimo custo-benefício.",
+      itens:["Motor 1.6 Flex","Câmbio manual","Ar-condicionado","Direção hidráulica","Vidros elétricos","Retrovisores elétricos","Multimídia","Rodas de liga leve","Chave Canivete"]
+    },
+    {
+      marca:"Kia Sportage", modelo:"Versão EX", ano:"2012", km:"200.000", cambio:"Automático", preco:"69.990",
+      cat:"suv", img:"", destaque:false,
+      descricao:"SUV espaçoso e completo, com todos os itens de conforto.",
+      itens:["Motor 2.0 Gasolina","Bancos em couro","Ar-condicionado digital","Direção elétrica","Volante multifuncional","Bancos com ajuste elétrico","Faróis de milha","Retrovisores elétricos","Alarme","Rodas de liga leve"]
+    },
+    {
+      marca:"Fiat Punto", modelo:"Versão Atractive", ano:"2013", km:"134.000", cambio:"Automático", preco:"39.990",
+      cat:"hatch", img:"", destaque:false,
+      descricao:"Hatch italiano com design marcante e bom espaço interno.",
+      itens:["Bancos em tecido","Ar-condicionado","Som original","Direção hidráulica","Vidros elétricos","Trava elétrica","Retrovisores elétricos","Alarme"]
+    },
+    {
+      marca:"Volkswagen", modelo:"Saveiro", ano:"2016", km:"132.000", cambio:"Manual", preco:"51.990",
+      cat:"picape", img:"", destaque:true,
+      descricao:"Picape compacta versão Trendline, ideal para trabalho e lazer.",
+      itens:["Versão Trendline","Motor 1.6 Flex","Câmbio manual","Ar Quente","Direção hidráulica","Vidros elétricos","Trava elétrica","Alarme"]
+    },
+    {
+      marca:"Renault", modelo:"Kwid", ano:"2021", km:"101.000", cambio:"Manual", preco:"42.990",
+      cat:"hatch", img:"", destaque:false,
+      descricao:"Hatch moderno versão Zen com baixo consumo e excelente custo-benefício.",
+      itens:["Versão Zen","Motor 1.0 Flex","Câmbio manual","Ar-condicionado","Som original","Direção elétrica","Vidros elétricos","Trava elétrica","Alarme"]
+    },
+    {
+      marca:"Honda", modelo:"HR-V", ano:"2016", km:"152.000", cambio:"Automático", preco:"82.990",
+      cat:"suv", img:"", destaque:false,
+      descricao:"SUV compacto versão LX com câmbio automático e itens completos.",
+      itens:["Versão LX","Motor 1.8 Flex","Câmbio automático","Ar-condicionado","Multimídia","Direção elétrica","Vidros elétricos","Retrovisores elétricos","Pneus novos","Alarme","Rodas de liga leve"]
+    },
+    {
+      marca:"Ford", modelo:"Ecosport", ano:"2011", km:"137.000", cambio:"Manual", preco:"45.990",
+      cat:"suv", img:"", destaque:false,
+      descricao:"SUV compacto versão Freestyle, resistente e econômico.",
+      itens:["Versão Freestyle","Motor 1.6 Flex","Câmbio manual","Ar-condicionado","Som original","Direção hidráulica","Vidros elétricos","Trava elétrica","Retrovisores elétricos","Alarme"]
+    },
+    {
+      marca:"Fiat Mobi", modelo:"Versão Like", ano:"2023", km:"70.000", cambio:"Manual", preco:"57.990",
+      cat:"hatch", img:"", destaque:false,
+      descricao:"Hatch moderno e econômico, zero km de manutenção.",
+      itens:["Motor 1.0 flex","Ar-condicionado","Computador de bordo","Vidros elétricos","Direção elétrica"]
+    },
+    {
+      marca:"Toyota", modelo:"Corolla", ano:"2012", km:"164.000", cambio:"Automático", preco:"68.990",
       cat:"sedan", img:"", destaque:false,
-      descricao:"Sedan executivo com espaço generoso e conforto superior em todas as situações.",
-      itens:["Motor 2.0 flex","Câmbio automático","Direção elétrica","Ar-condicionado","Central multimídia"]
-    },
-    {
-      marca:"Volkswagen", modelo:"Saveiro Robust 1.6", ano:"2015", km:"110.000", cambio:"Manual", preco:"49.900",
-      cat:"picape", img:"", destaque:false,
-      descricao:"A picape compacta mais vendida do Brasil. Ideal para trabalho e lazer.",
-      itens:["Motor 1.6 flex","Câmbio manual","Direção hidráulica","Ar-condicionado","Caçamba reforçada"]
-    },
-    {
-      marca:"Renault", modelo:"Kwid Intense 1.0", ano:"2020", km:"55.000", cambio:"Manual", preco:"48.900",
-      cat:"suv", img:"", destaque:true,
-      descricao:"Design aventureiro com o melhor custo-benefício do segmento.",
-      itens:["Motor 1.0 flex","Câmbio manual","Direção elétrica","Ar-condicionado","Central multimídia","Câmera de ré"]
+      descricao:"Sedan executivo confiável com bancos em couro e itens completos de série.",
+      itens:["Bancos em couro","Ar-condicionado digital","Som original","Direção hidráulica","Vidros elétricos","Trava elétrica","Retrovisores elétricos com rebatimento","Alarme"]
     },
   ],
 
