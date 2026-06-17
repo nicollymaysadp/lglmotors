@@ -774,6 +774,7 @@ const arrowSVG = `<svg class="cat-arrow" width="20" height="20" viewBox="0 0 24 
 let stockData = CONFIG.carros;
 const countByCat = id => stockData.filter(c => c.cat === id).length;
 const ADM_KEY  = "lgl_estoque";
+const ADM_VER  = "lgl_estoque_ver";  // Caminho 1: versão do estoque em cache (economia de banda)
 async function _sha(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');}
 const ADM_HASH = "288cefcfdcd8e8d5a1dbd0ee56e1aa18f53a938cef8e90d04ffcab37d38c307c";
 let   _admF=0, _admB=false;
@@ -959,12 +960,22 @@ async function initStock(){
       const d=JSON.parse(saved);
       if(d.length >= CONFIG.carros.length){
         stockData=d; renderHero();renderCats();renderGrid("todos");renderIgGrid();
-        // Firebase em background — atualiza silenciosamente se tiver dados mais novos
+        // Firebase em background — Caminho 1: checa só a VERSÃO (poucos bytes).
+        // Só baixa o estoque completo (pesado) se algo mudou desde o último acesso.
         if(CONFIG.firebaseUrl){
-          fetch(`${CONFIG.firebaseUrl}/stock.json?t=${Date.now()}`,{cache:"no-cache"})
-            .then(r=>r.ok?r.json():null).then(raw=>{
-              const data=Array.isArray(raw)?raw:(raw&&typeof raw==='object'?Object.values(raw):null);
-              if(data&&data.length){ stockData=data; try{localStorage.setItem(ADM_KEY,JSON.stringify(data));}catch(e){} renderHero();renderCats();renderGrid("todos");renderIgGrid(); }
+          const localVer = localStorage.getItem(ADM_VER);
+          fetch(`${CONFIG.firebaseUrl}/version.json?t=${Date.now()}`,{cache:"no-cache"})
+            .then(r=>r.ok?r.json():null).then(ver=>{
+              if(ver!==null && String(ver)===String(localVer)) return; // já atualizado → não baixa nada
+              return fetch(`${CONFIG.firebaseUrl}/stock.json?t=${Date.now()}`,{cache:"no-cache"})
+                .then(r=>r.ok?r.json():null).then(raw=>{
+                  const data=Array.isArray(raw)?raw:(raw&&typeof raw==='object'?Object.values(raw):null);
+                  if(data&&data.length){
+                    stockData=data;
+                    try{ localStorage.setItem(ADM_KEY,JSON.stringify(data)); if(ver!==null) localStorage.setItem(ADM_VER,String(ver)); }catch(e){}
+                    renderHero();renderCats();renderGrid("todos");renderIgGrid();
+                  }
+                });
             }).catch(()=>{});
         }
         return;
@@ -984,6 +995,9 @@ async function initStock(){
         if(data&&data.length){
           stockData = data;
           try{ localStorage.setItem(ADM_KEY, JSON.stringify(data)); }catch(e){}
+          // Caminho 1: guarda a versão atual p/ evitar redownloads nas próximas visitas
+          fetch(`${CONFIG.firebaseUrl}/version.json?t=${Date.now()}`,{cache:"no-cache"})
+            .then(r=>r.ok?r.json():null).then(v=>{ if(v!==null){ try{localStorage.setItem(ADM_VER,String(v));}catch(e){} } }).catch(()=>{});
           renderHero();renderCats();renderGrid("todos");renderIgGrid(); return;
         }
       }
@@ -1272,6 +1286,17 @@ async function admPublish(){
           body:json
         });
         if(res.ok){
+          // Caminho 1: grava uma nova versão para os visitantes saberem que mudou
+          const novaVer = Date.now();
+          try{
+            await fetch(`${CONFIG.firebaseUrl}/version.json`,{
+              method:"PUT",
+              headers:{"Content-Type":"application/json"},
+              body:String(novaVer)
+            });
+            localStorage.setItem(ADM_VER, String(novaVer));
+            localStorage.setItem(ADM_KEY, JSON.stringify(stockData));
+          }catch(e){}
           alert(`✅ Publicado! (${sizeMB}MB)\n\nTodos os dispositivos já estão atualizados automaticamente.`);
           return;
         }
