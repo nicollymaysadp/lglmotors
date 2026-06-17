@@ -916,7 +916,18 @@ function parseCSV(text){
 async function initStock(){
   renderCats();renderChips();
 
-  // 1. Firebase — sincronização automática entre todos os dispositivos
+  // 1. localStorage — carrega imediatamente sem esperar rede
+  const saved=localStorage.getItem(ADM_KEY);
+  if(saved){ try{ const d=JSON.parse(saved); if(d.length){ stockData=d; renderHero();renderCats();renderGrid("todos");renderIgGrid(); return; } }catch(e){} }
+
+  // 2. __STOCK_PRESET__ embutido no HTML
+  if(window.__STOCK_PRESET__&&window.__STOCK_PRESET__.length){
+    stockData=window.__STOCK_PRESET__;
+    try{ localStorage.setItem(ADM_KEY,JSON.stringify(stockData)); }catch(e){}
+    renderHero();renderCats();renderGrid("todos");renderIgGrid(); return;
+  }
+
+  // 3. Firebase — apenas se localStorage estiver vazio
   if(CONFIG.firebaseUrl){
     try{
       const res = await fetch(`${CONFIG.firebaseUrl}/stock.json?t=${Date.now()}`,{cache:"no-cache"});
@@ -932,7 +943,7 @@ async function initStock(){
     }catch(e){ console.warn("LGL: Firebase indisponível, tentando fallback.",e); }
   }
 
-  // 2. stock.json do Netlify (fallback manual)
+  // 4. stock.json fallback
   try{
     const res = await fetch("stock.json?t="+Date.now(),{cache:"no-cache"});
     if(res.ok){
@@ -944,17 +955,6 @@ async function initStock(){
       }
     }
   }catch(e){}
-
-  // 3. localStorage
-  const saved=localStorage.getItem(ADM_KEY);
-  if(saved){ try{ const d=JSON.parse(saved); if(d.length){ stockData=d; renderHero();renderCats();renderGrid("todos");renderIgGrid(); return; } }catch(e){} }
-
-  // 4. __STOCK_PRESET__ (versão antiga)
-  if(window.__STOCK_PRESET__&&window.__STOCK_PRESET__.length){
-    stockData=window.__STOCK_PRESET__;
-    try{ localStorage.setItem(ADM_KEY,JSON.stringify(stockData)); }catch(e){}
-    renderHero();renderCats();renderGrid("todos");renderIgGrid(); return;
-  }
 
   if(CONFIG.sheetUrl){
     document.getElementById("grid").innerHTML=`<div class="empty" style="padding:70px 0">
