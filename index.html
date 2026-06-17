@@ -916,18 +916,12 @@ function parseCSV(text){
 async function initStock(){
   renderCats();renderChips();
 
-  // 1. localStorage — carrega imediatamente sem esperar rede
+  // 1. localStorage — exibe imediatamente sem esperar rede
+  let rendered = false;
   const saved=localStorage.getItem(ADM_KEY);
-  if(saved){ try{ const d=JSON.parse(saved); if(d.length){ stockData=d; renderHero();renderCats();renderGrid("todos");renderIgGrid(); return; } }catch(e){} }
+  if(saved){ try{ const d=JSON.parse(saved); if(d.length){ stockData=d; renderHero();renderCats();renderGrid("todos");renderIgGrid(); rendered=true; } }catch(e){} }
 
-  // 2. __STOCK_PRESET__ embutido no HTML
-  if(window.__STOCK_PRESET__&&window.__STOCK_PRESET__.length){
-    stockData=window.__STOCK_PRESET__;
-    try{ localStorage.setItem(ADM_KEY,JSON.stringify(stockData)); }catch(e){}
-    renderHero();renderCats();renderGrid("todos");renderIgGrid(); return;
-  }
-
-  // 3. Firebase — apenas se localStorage estiver vazio
+  // 2. Firebase em paralelo — atualiza se tiver dados mais completos
   if(CONFIG.firebaseUrl){
     try{
       const res = await fetch(`${CONFIG.firebaseUrl}/stock.json?t=${Date.now()}`,{cache:"no-cache"});
@@ -940,7 +934,15 @@ async function initStock(){
           renderHero();renderCats();renderGrid("todos");renderIgGrid(); return;
         }
       }
-    }catch(e){ console.warn("LGL: Firebase indisponível, tentando fallback.",e); }
+    }catch(e){ console.warn("LGL: Firebase indisponível.",e); }
+  }
+
+  if(rendered) return;
+
+  // 3. __STOCK_PRESET__ embutido no HTML (fallback final)
+  if(window.__STOCK_PRESET__&&window.__STOCK_PRESET__.length){
+    stockData=window.__STOCK_PRESET__;
+    renderHero();renderCats();renderGrid("todos");renderIgGrid(); return;
   }
 
   // 4. stock.json fallback
