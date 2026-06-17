@@ -916,21 +916,29 @@ function parseCSV(text){
 async function initStock(){
   renderCats();renderChips();
 
-  // 1. localStorage — só usa se tiver ao menos tantos carros quanto o CONFIG padrão
-  let rendered = false;
+  // 1. localStorage — renderiza imediatamente se tiver dados válidos
   const saved=localStorage.getItem(ADM_KEY);
   if(saved){
     try{
       const d=JSON.parse(saved);
       if(d.length >= CONFIG.carros.length){
-        stockData=d; renderHero();renderCats();renderGrid("todos");renderIgGrid(); rendered=true;
+        stockData=d; renderHero();renderCats();renderGrid("todos");renderIgGrid();
+        // Firebase em background — atualiza silenciosamente se tiver dados mais novos
+        if(CONFIG.firebaseUrl){
+          fetch(`${CONFIG.firebaseUrl}/stock.json?t=${Date.now()}`,{cache:"no-cache"})
+            .then(r=>r.ok?r.json():null).then(raw=>{
+              const data=Array.isArray(raw)?raw:(raw&&typeof raw==='object'?Object.values(raw):null);
+              if(data&&data.length){ stockData=data; try{localStorage.setItem(ADM_KEY,JSON.stringify(data));}catch(e){} renderHero();renderCats();renderGrid("todos");renderIgGrid(); }
+            }).catch(()=>{});
+        }
+        return;
       } else {
-        localStorage.removeItem(ADM_KEY); // limpa dados incompletos/corrompidos
+        localStorage.removeItem(ADM_KEY);
       }
     }catch(e){ localStorage.removeItem(ADM_KEY); }
   }
 
-  // 2. Firebase em paralelo — atualiza se tiver dados mais completos
+  // 2. Firebase — só se localStorage estava vazio/inválido
   if(CONFIG.firebaseUrl){
     try{
       const res = await fetch(`${CONFIG.firebaseUrl}/stock.json?t=${Date.now()}`,{cache:"no-cache"});
@@ -945,8 +953,6 @@ async function initStock(){
       }
     }catch(e){ console.warn("LGL: Firebase indisponível.",e); }
   }
-
-  if(rendered) return;
 
   // 3. __STOCK_PRESET__ embutido no HTML (fallback final)
   if(window.__STOCK_PRESET__&&window.__STOCK_PRESET__.length){
