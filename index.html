@@ -947,15 +947,14 @@ function parseCSV(text){
 
 async function initStock(){
   renderCats();renderChips();
-  // Dados publicados (via botão Publicar) têm prioridade máxima
-  if(window.__STOCK_PRESET__&&window.__STOCK_PRESET__.length){
-    stockData=window.__STOCK_PRESET__;
-    localStorage.setItem(ADM_KEY,JSON.stringify(stockData));
-    renderHero();renderCats();renderGrid("todos"); return;
-  }
-  // Admin (localStorage) tem prioridade sobre tudo
+  // localStorage (admin) tem prioridade maxima — nao e sobrescrito pelo preset
   const saved=localStorage.getItem(ADM_KEY);
   if(saved){ try{ const d=JSON.parse(saved); if(d.length){ stockData=d; renderHero();renderCats();renderGrid("todos"); return; } }catch(e){} }
+  // Preset do HTML e fallback quando localStorage esta vazio
+  if(window.__STOCK_PRESET__&&window.__STOCK_PRESET__.length){
+    stockData=window.__STOCK_PRESET__;
+    renderHero();renderCats();renderGrid("todos"); return;
+  }
   if(CONFIG.sheetUrl){
     document.getElementById("grid").innerHTML=`<div class="empty" style="padding:70px 0">
       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="margin:0 auto 14px;display:block;animation:spin 1s linear infinite">
