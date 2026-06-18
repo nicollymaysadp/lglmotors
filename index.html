@@ -249,7 +249,7 @@ footer a:hover{color:#fff}
 .dv-specs{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;padding:16px 20px;background:var(--paper-2);border-radius:12px}
 .dv-spec{display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600}
 .dv-spec svg{width:16px;height:16px;color:var(--steel);flex:none}
-.dv-desc{font-size:.95rem;line-height:1.7;color:var(--ink-3);margin-bottom:20px}
+.dv-desc{font-size:.95rem;line-height:1.7;color:var(--ink-3);margin-bottom:20px;white-space:pre-line}
 .dv-items{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:28px}
 .dv-items li{display:flex;align-items:center;gap:8px;font-size:.9rem}
 .dv-items li::before{content:"✓";font-weight:900;color:var(--ink);flex:none}
@@ -407,13 +407,13 @@ footer a:hover{color:#fff}
     <div class="hl">
       <div class="eyebrow">LGL Motors · Sorocaba/SP</div>
       <h1>A loja que<br>realiza<br>sonhos</h1>
-      <p>4 anos, mais de 300 famílias atendidas e uma missão que não muda: encontrar o carro certo para cada pessoa. Na LGL Motors, cada negociação é tratada com honestidade e cuidado de verdade.</p>
+      <p>3 anos, mais de 300 famílias atendidas e uma missão que não muda: encontrar o carro certo para cada pessoa. Na LGL Motors, cada negociação é tratada com honestidade e cuidado de verdade.</p>
       <div class="hero-btns">
         <a href="#estoque" class="btn btn-ghost">Ver estoque</a>
         <a href="#financiamento" class="btn btn-light">Simular financiamento</a>
       </div>
       <div class="stats">
-        <div><div class="stat-num"><span data-count="4">0</span>+</div><div class="stat-lbl">Anos de<br>experiência</div></div>
+        <div><div class="stat-num"><span data-count="3">0</span>+</div><div class="stat-lbl">Anos de<br>experiência</div></div>
         <div><div class="stat-num"><span data-count="300">0</span>+</div><div class="stat-lbl">Vendas<br>realizadas</div></div>
         <div><div class="stat-num"><span data-count="100">0</span>%</div><div class="stat-lbl">Dedicação<br>a você</div></div>
       </div>
@@ -510,7 +510,7 @@ footer a:hover{color:#fff}
       <div class="reveal">
         <div class="eyebrow" style="display:flex;align-items:center;gap:12px"><span style="width:30px;height:2px;background:var(--ink);display:inline-block"></span>Nossa história</div>
         <h2 style="font-size:clamp(1.9rem,4vw,3rem);margin-top:14px">Mais que uma loja,<br>uma família</h2>
-        <p class="lead" style="margin-top:18px">Em 4 anos de mercado, o Leonardo construiu algo que vai muito além de uma carreira em vendas: construiu confiança. Mais de 300 famílias encontraram o carro certo através do seu atendimento — e cada uma delas foi tratada com a mesma seriedade e cuidado da primeira.</p>
+        <p class="lead" style="margin-top:18px">Em 3 anos de mercado, o Leonardo construiu algo que vai muito além de uma carreira em vendas: construiu confiança. Mais de 300 famílias encontraram o carro certo através do seu atendimento — e cada uma delas foi tratada com a mesma seriedade e cuidado da primeira.</p>
         <p style="margin-top:14px;color:var(--steel)">A LGL Motors é o passo seguinte dessa história. Uma loja fundada com propósito, onde nenhum cliente sai sem uma resposta honesta. O nome carrega o que há de mais importante: <b>L</b> de Leonardo, <b>G</b> de Gabriela e <b>L</b> de Lucca — a família que está por trás de cada negociação, e o motivo pelo qual cada detalhe importa.</p>
         <div class="meaning">
           <div class="m"><div class="ltr">L</div><b>Leonardo</b><span>Fundador e especialista</span></div>
@@ -836,7 +836,7 @@ function openDetail(c){
         <div class="dv-spec"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm1 14h-2v-6h2Zm0-8h-2V6h2Z"/></svg>${c.km} km</div>
         <div class="dv-spec"><svg viewBox="0 0 24 24" fill="none"><circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="7" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="7" cy="17" r="2" stroke="currentColor" stroke-width="1.7"/><path d="M7 9v8M17 9v3a2 2 0 0 1-2 2H7" stroke="currentColor" stroke-width="1.7"/></svg>${c.cambio}</div>
       </div>
-      ${c.descricao ? `<p class="dv-desc">${c.descricao}</p>` : ""}
+      ${c.descricao ? `<p class="dv-desc">${c.descricao.replace(/\s*✅\s*/g,"\n✅").replace(/^\s+/,"")}</p>` : ""}
       ${c.itens && c.itens.length ? `<ul class="dv-items">${c.itens.map(i=>`<li>${i}</li>`).join("")}</ul>` : ""}
       <div class="dv-price"><sup>R$</sup> ${priceNum.toLocaleString("pt-BR")}</div>
       <a href="${waLink(msg)}" target="_blank" rel="noopener" class="btn btn-dark" style="width:100%;justify-content:center;font-size:.9rem">
